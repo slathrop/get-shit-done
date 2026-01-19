@@ -1,0 +1,78 @@
+---
+layout: layouts/base.hbs
+---
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <h1 class="hero__title">{{site.name}}</h1>
+      <p class="hero__tagline">{{site.tagline}}</p>
+      <p class="hero__subtagline">{{site.subtagline}}</p>
+
+      <div class="hero__install">
+        {{{installCommand site.installCommand}}}
+        <p class="hero__hint">Run inside your terminal. Then use <code>/gsd:help</code> in Claude Code.</p>
+      </div>
+
+      <div class="hero__ctas">
+        <a class="btn" href="{{url '/docs/'}}">Read the docs</a>
+        <a class="btn btn--ghost" href="{{url '/support/'}}">Support the project</a>
+      </div>
+
+      <div class="hero__badges">
+        <a class="badge" href="{{site.repoUrl}}" target="_blank" rel="noopener noreferrer">Star on GitHub</a>
+        <a class="badge" href="{{site.npmUrl}}" target="_blank" rel="noopener noreferrer">Install from npm</a>
+      </div>
+    </div>
+
+    <div class="hero__media" aria-hidden="true">
+      <img src="{{url '/assets/terminal.svg'}}" alt="" />
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Watch: GSD explained</h2>
+    <p class="lede">A quick walkthrough of why GSD exists, how it works, and why it changes solo development workflows.</p>
+    {{{youtube site.videos.explained.id site.videos.explained.title}}}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2>What GSD does differently</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Spec-driven, not vibe-driven</h3>
+        <p>GSD extracts requirements, builds a roadmap, and validates outcomes—so "done" means verifiably done.</p>
+      </div>
+      <div class="card">
+        <h3>Fresh context per atomic task</h3>
+        <p>Each tiny task runs in a new sub-agent context to fight context rot and keep output quality high.</p>
+      </div>
+      <div class="card">
+        <h3>Methodical, not enterprise theater</h3>
+        <p>No story points, ceremonies, or Jira cosplay. Just repeatable planning + execution that ships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Support GSD</h2>
+    <p class="lede">If GSD saves you time or helps you ship, consider supporting development.</p>
+
+    <div class="quote">
+      <p class="quote__text">“I want to just go full-time working on GSD. I had no idea how I was going to do it, but my partner definitely was a little bit shocked when I was like, 'Yeah, I'm all in on this thing that I've built and thousands of people are using it worldwide right now.'”</p>
+      <p class="quote__attribution">— {{site.author}}</p>
+    </div>
+
+    <div class="hero__ctas">
+      <a class="btn" href="{{site.sponsorUrl}}" target="_blank" rel="noopener noreferrer">Sponsor on GitHub</a>
+      <a class="btn btn--ghost" href="{{url '/support/'}}">More ways to help</a>
+    </div>
+  </div>
+</section>
+
+{{{content}}}

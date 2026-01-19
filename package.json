@@ -5,6 +5,15 @@
   "bin": {
     "get-shit-done-cc": "bin/install.js"
   },
+  "scripts": {
+    "site:install": "npm --prefix site install --no-fund --no-audit",
+    "presite:dev": "npm run site:install",
+    "presite:build": "npm run site:install",
+    "presite:lint": "npm run site:install",
+    "site:dev": "npm --prefix site run dev",
+    "site:build": "npm --prefix site run build",
+    "site:lint": "npm --prefix site run lint"
+  },
   "files": [
     "bin",
     "commands",

@@ -1,0 +1,28 @@
+name: Site CI
+
+on:
+  pull_request:
+    paths:
+      - "site/**"
+      - ".github/workflows/site-ci.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --prefix site
+
+      - name: Lint (sanity checks)
+        run: npm --prefix site run lint
+
+      - name: Build site
+        run: npm --prefix site run build
+        env:
+          ELEVENTY_PATH_PREFIX: /${{ github.event.repository.name }}/

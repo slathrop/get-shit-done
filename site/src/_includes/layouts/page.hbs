@@ -1,0 +1,17 @@
+---
+layout: layouts/base.hbs
+---
+<section class="page">
+  <div class="container">
+    <header class="page__header">
+      <h1 class="page__title">{{title}}</h1>
+      {{#if intro}}
+        <p class="page__intro">{{intro}}</p>
+      {{/if}}
+    </header>
+
+    <div class="prose">
+      {{{content}}}
+    </div>
+  </div>
+</section>

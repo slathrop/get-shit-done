@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{#if title}}{{title}} · {{site.shortName}}{{else}}{{site.name}}{{/if}}</title>
+    <meta name="description" content="{{#if description}}{{description}}{{else}}{{site.tagline}} {{site.subtagline}}{{/if}}" />
+
+    <meta property="og:site_name" content="{{site.name}}" />
+    <meta property="og:title" content="{{#if title}}{{title}}{{else}}{{site.name}}{{/if}}" />
+    <meta property="og:description" content="{{#if description}}{{description}}{{else}}{{site.tagline}} {{site.subtagline}}{{/if}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{site.repoUrl}}" />
+
+    <link rel="icon" href="{{url '/assets/favicon.svg'}}" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{url '/assets/css/style.css'}}" />
+  </head>
+
+  <body>
+    {{> header}}
+
+    <main class="main" id="main">
+      {{{content}}}
+    </main>
+
+    {{> footer}}
+  </body>
+</html>

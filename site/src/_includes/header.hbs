@@ -1,0 +1,23 @@
+<header class="header">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="container header__inner">
+    <a class="brand" href="{{url '/'}}">
+      <span class="brand__mark">GSD</span>
+      <span class="brand__name">{{site.name}}</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      {{#each navigation}}
+        <a class="nav__link {{#if (eq ../page.url this.url)}}nav__link--active{{/if}}" href="{{url this.url}}">
+          {{this.label}}
+        </a>
+      {{/each}}
+    </nav>
+
+    <div class="header__cta">
+      <a class="btn btn--ghost" href="{{site.repoUrl}}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn" href="{{site.sponsorUrl}}" target="_blank" rel="noopener noreferrer">Sponsor</a>
+    </div>
+  </div>
+</header>
