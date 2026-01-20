@@ -153,10 +153,6 @@ pre code {
   z-index: 30;
 }
 
-.copy {
-  color: var(--accent-3);
-}
-
 /* Header + nav */
 
 .site-header {
@@ -428,6 +424,10 @@ main {
 
 .install button:hover {
   border-color: color-mix(in oklab, var(--accent) 48%, var(--border));
+}
+
+.install button.copy {
+  color: var(--accent-3);
 }
 
 .hero-media {
