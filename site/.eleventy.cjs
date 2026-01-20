@@ -35,6 +35,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setLibrary('md', md);
 
+  // eleventyConfig.setPathPrefix(process.env.PATH_PREFIX || "/");
+
   eleventyConfig.addPassthroughCopy({
     'site/src/assets': 'assets',
     'site/src/robots.txt': 'robots.txt',
