@@ -8,6 +8,7 @@
   --border: rgba(15, 23, 42, 0.12);
   --accent: #0284c7;
   --accent-2: #6d28d9;
+  --accent-3: #a0a0f0; 
   --shadow: 0 10px 30px rgba(2, 8, 20, 0.08);
   --radius: 14px;
   --max: 72rem;
@@ -150,6 +151,10 @@ pre code {
   border: 1px solid var(--border);
   border-radius: 12px;
   z-index: 30;
+}
+
+.copy {
+  color: var(--accent-3);
 }
 
 /* Header + nav */
